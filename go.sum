@@ -163,8 +163,8 @@ github.com/pelletier/go-toml/v2 v2.0.5 h1:ipoSadvV8oGUjnUbMub59IDPPwfxF694nG/jwb
 github.com/pelletier/go-toml/v2 v2.0.5/go.mod h1:OMHamSCAODeSsVrwwvcJOaoN0LIUIaFVNZzmWyNfXas=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/sftp v1.13.1/go.mod h1:3HaPG6Dq1ILlpPZRO0HVMrsydcdLt6HRDccSgb87qRg=
-github.com/plivox/gulmy v0.1.1 h1:qA3V0t9JQxQLIw/U/4z5KBH3aSxF6dFABRLK+Z7b1i8=
-github.com/plivox/gulmy v0.1.1/go.mod h1:s3Y9Cq9Ct/K57vUeZ4hjHefoY9NlaxswmUnpyFW+Xdk=
+github.com/plivox/gulmy v0.1.2 h1:QP2inYv+HKTXXZxGm6gJ7FsRjBX14BDuT1k7zO07nNg=
+github.com/plivox/gulmy v0.1.2/go.mod h1:s3Y9Cq9Ct/K57vUeZ4hjHefoY9NlaxswmUnpyFW+Xdk=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=

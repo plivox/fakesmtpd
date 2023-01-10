@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/emersion/go-smtp v0.16.0
 	github.com/imdario/mergo v0.3.13
-	github.com/plivox/gulmy v0.1.1
+	github.com/plivox/gulmy v0.1.2
 	github.com/rs/zerolog v1.28.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.14.0

@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	s "github.com/plivox/gulmy/shell"
-	v "github.com/plivox/gulmy/version"
+	h "github.com/plivox/gulmy/pkg/helper"
+	s "github.com/plivox/gulmy/pkg/shell"
 	"github.com/spf13/cobra"
 )
 
@@ -61,13 +61,12 @@ func init() {
 }
 
 func initConfig() {
-	version = v.FromFile()
-
-	fmt.Println(version)
-
+	version = h.VersionFromFile()
 	releaseDir = s.Join(buildDir, "release")
 	binaryFlagLDFlags = []string{
 		fmt.Sprintf("-X %s/internal/cmd.Version=%s", name, version),
+		fmt.Sprintf("-X %s/internal/cmd.CommitHash=%s", name, h.GitCommitHash()),
+		fmt.Sprintf("-X %s/internal/cmd.BuildTimestamp=%s", name, h.BuildTimestamp()),
 	}
 }
 
@@ -90,7 +89,7 @@ func binaryCmdRun() {
 	if binaryFlagOS != "" {
 		kernels = []string{binaryFlagOS}
 	} else {
-		kernels = []string{s.Windows, s.Darwin, s.Linux}
+		kernels = []string{h.Windows, h.Darwin, h.Linux}
 	}
 
 	s.Mkdir(buildDir)
@@ -108,11 +107,11 @@ func binaryCmdRun() {
 			architectures = []string{binaryFlagArch}
 		} else {
 			switch kernel {
-			case s.Windows:
+			case h.Windows:
 				architectures = []string{"amd64"}
-			case s.Darwin:
+			case h.Darwin:
 				architectures = []string{"amd64", "arm64"}
-			case s.Linux:
+			case h.Linux:
 				architectures = []string{"amd64", "386", "arm64"}
 			}
 		}
@@ -121,7 +120,7 @@ func binaryCmdRun() {
 			os.Setenv("GOARCH", arch)
 
 			target := fmt.Sprintf("%s/%s-%s-%s-%s", releaseDir, name, version, kernel, arch)
-			if kernel == s.Windows {
+			if kernel == h.Windows {
 				target += ".exe"
 			}
 
