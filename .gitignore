@@ -1,0 +1,4 @@
+/build
+/resources
+fakesmtpd.yml
+*.log
